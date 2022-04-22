@@ -14,9 +14,9 @@
         </constantsdef>
         <mkconfig boundcount="240" fluidcount="9" />
         <geometry>
-            <definition dp="0.00375" units_comment="metres (m)"> 
-                <pointmin x="-4.05" y="-0.05" z="-0.05" />
-                <pointmax x="3.05" y="0.35" z="0.55" />
+            <definition dp="0.0025" units_comment="metres (m)"> 
+                <pointmin x="-7.05" y="-0.05" z="-0.05" />
+                <pointmax x="5.05" y="0.35" z="0.55" />
             </definition>
             <commands>
                 <mainlist>
@@ -25,13 +25,13 @@
                     <setmkfluid mk="0" />
                     <drawbox>
                         <boxfill>solid</boxfill>
-                        <point x="-4" y="0" z="0" />
-                        <size x="2" y="0.30" z="0.20" />
+                        <point x="-7" y="0" z="0" />
+                        <size x="5" y="0.30" z="0.40" />
                     </drawbox>
                     <setmkbound mk="51" />
                     <drawbox>
                         <boxfill>solid</boxfill>
-                        <point x="-0.1" y="0.135" z="0" /> !-- distance between particles of the cube should and particles of the bottom should be "dp"
+                        <point x="-0.08" y="0.135" z="0" /> !-- distance between particles of the cube should and particles of the bottom should be "dp"
                         <size x="-0.015" y="0.03" z="0.02" />
                     </drawbox>
                     <shapeout file="boulder" />
@@ -39,12 +39,12 @@
                     <drawbox>
                         <boxfill>left | bottom | front | back</boxfill>
                         <point x="0" y="0" z="0" />
-                        <size x="-4" y="0.3" z="0.5" />
+                        <size x="-7" y="0.3" z="0.5" />
                     </drawbox>
                     <drawbox>
                         <boxfill>right | front | back</boxfill>
                         <point x="0" y="0" z="0.2" />
-                        <size x="3" y="0.3" z="0.3" />
+                        <size x="5" y="0.3" z="0.3" />
                     </drawbox>
                     <drawbox>
                         <boxfill>left | top</boxfill>
