@@ -28,15 +28,25 @@ export isosurface="${dirbin}/IsoSurface_linux64"
 export flowtool="${dirbin}/FlowTool_linux64"
 export floatinginfo="${dirbin}/FloatingInfo_linux64"
 
-# "dirout" to store results is removed if it already exists
-if [ -e ${dirout} ]; then rm -r ${dirout}; fi
 
-# CODES are executed according the selected parameters of execution in this testcase
+export dirout2=${dirout}/particles
+# ${partvtk} -dirin ${diroutdata} -savevtk ${dirout2}/PartFluid -onlytype:-all,+fluid
+# ${partvtk} -dirin ${diroutdata} -continue:1 -savevtk ${dirout2}/PartFluid -onlytype:-all,+fluid
+# if [ $? -ne 0 ] ; then fail; fi
 
-${gencase} ${name}_Def ${dirout}/${name} -save:all
+${partvtk} -dirin ${diroutdata} -savevtk ${dirout2}/PartBoulder -onlytype:-all,+floating
 if [ $? -ne 0 ] ; then fail; fi
 
-${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres
+export dirout2=${dirout}/boundary
+${boundaryvtk} -loadvtk AutoDp -motiondata ${diroutdata} -savevtkdata ${dirout2}/Boulder -onlytype:floating -savevtkdata ${dirout2}/Boulder.vtk -onlytype:fixed
+if [ $? -ne 0 ] ; then fail; fi
+
+export dirout2=${dirout}/floatinginfo
+${floatinginfo} -dirin ${diroutdata} -onlymk:61 -savedata ${dirout2}/FloatingMotion 
+if [ $? -ne 0 ] ; then fail; fi
+
+export dirout2=${dirout}/surface
+${isosurface} -dirin ${diroutdata} -saveiso ${dirout2}/Surface 
 if [ $? -ne 0 ] ; then fail; fi
 
 read -n1 -r -p "Press any key to continue..." key

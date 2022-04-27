@@ -26,7 +26,7 @@
                     <drawbox>
                         <boxfill>solid</boxfill>
                         <point x="-7" y="0" z="0" />
-                        <size x="5" y="0.30" z="0.40" />
+                        <size x="3" y="0.30" z="0.40" />
                     </drawbox>
                     <setmkbound mk="51" />
                     <drawbox>
