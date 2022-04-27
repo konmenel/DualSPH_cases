@@ -46,7 +46,7 @@ ${floatinginfo} -dirin ${diroutdata} -onlymk:61 -savedata ${dirout2}/FloatingMot
 if [ $? -ne 0 ] ; then fail; fi
 
 export dirout2=${dirout}/surface
-${isosurface} -dirin ${diroutdata} -saveiso ${dirout2}/Surface 
+${isosurface} -dirin ${diroutdata} -continue:1 -saveiso ${dirout2}/Surface
 if [ $? -ne 0 ] ; then fail; fi
 
 read -n1 -r -p "Press any key to continue..." key
