@@ -14,7 +14,7 @@
         </constantsdef>
         <mkconfig boundcount="240" fluidcount="9" />
         <geometry>
-            <definition dp="0.0025" units_comment="metres (m)"> 
+            <definition dp="0.003" units_comment="metres (m)"> 
                 <pointmin x="-7.05" y="-0.05" z="-0.05" />
                 <pointmax x="5.05" y="0.35" z="0.55" />
             </definition>
