@@ -42,7 +42,7 @@ ${boundaryvtk} -loadvtk AutoDp -motiondata ${diroutdata} -savevtkdata ${dirout2}
 if [ $? -ne 0 ] ; then fail; fi
 
 export dirout2=${dirout}/floatinginfo
-${floatinginfo} -dirin ${diroutdata} -onlymk:61 -savedata ${dirout2}/FloatingMotion 
+${floatinginfo} -dirin ${diroutdata} -onlymk:51 -savedata ${dirout2}/FloatingMotion 
 if [ $? -ne 0 ] ; then fail; fi
 
 export dirout2=${dirout}/surface
