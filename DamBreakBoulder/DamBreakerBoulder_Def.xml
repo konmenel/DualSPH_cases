@@ -70,7 +70,7 @@
     <execution>
         <special>
             <chrono>
-                <_savedata value="0.025" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
+                <_savedata value="0.015" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
                 <schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />
 				<collision activate="true">
 				    <distancedp value="0.5" comment="Allowed collision overlap according Dp (default=0.5)" />
@@ -98,8 +98,8 @@
             <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
             <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
             <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
-            <parameter key="TimeMax" value="6" comment="Time of simulation" />
-            <parameter key="TimeOut" value="0.025" comment="Time between output files" />
+            <parameter key="TimeMax" value="5" comment="Time of simulation" />
+            <parameter key="TimeOut" value="0.015" comment="Time between output files" />
             <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
             <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
             <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
