@@ -10,7 +10,7 @@
             <coefsound value="20" comment="Coefficient to multiply speedsystem" />
             <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
             <coefh value="1.0" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
-            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+            <cflnumber value="0.1" comment="Coefficient to multiply dt" />
         </constantsdef>
         <mkconfig boundcount="240" fluidcount="9" />
         <geometry>
@@ -70,7 +70,7 @@
     <execution>
         <special>
             <chrono>
-                <_savedata value="0.01" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
+                <_savedata value="0.025" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
                 <schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />
 				<collision activate="true">
 				    <distancedp value="0.5" comment="Allowed collision overlap according Dp (default=0.5)" />
