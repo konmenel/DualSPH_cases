@@ -77,7 +77,7 @@
 					<contactmethod value="0" comment="Contact method type. 0:NSC (Non Smooth Contacts), 1:SMC (SMooth Contacts). (default=0)" />	
 				</collision>
 				<bodyfloating id="boulder" mkbound="51" modelfile="AutoActual" />
-                <bodyfixed id="tank" mkbound="0" modelfile="AutoActual" modelnormal="invert" />
+                <bodyfixed id="tank" mkbound="0" modelfile="AutoActual" />
             </chrono>
         </special>
         <parameters>
