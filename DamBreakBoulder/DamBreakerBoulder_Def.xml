@@ -46,12 +46,14 @@
                         <point x="0" y="0" z="0.2" />
                         <size x="5" y="0.3" z="0.3" />
                     </drawbox>
+                    <shapeout file="tank" />
+                    <setmkbound mk="1" />
                     <drawbox>
                         <boxfill>left | top</boxfill>
                         <point x="0" y="0" z="0" />
                         <size x="5" y="0.3" z="0.2" />
                     </drawbox>
-                    <shapeout file="tank" />
+                    <shapeout file="cliff" />
                 </mainlist>
             </commands>
         </geometry>
@@ -64,20 +66,22 @@
             <propertyfile file="Floating_Materials.xml" path="materials" />
             <links>
                 <link mkbound="0" property="steel" comment="Property for the tank" />
+                <link mkbound="1" property="steel" comment="Property for the cliff" />
             </links>
         </properties>
     </casedef>
     <execution>
         <special>
             <chrono>
-                <_savedata value="0.015" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
+                <_savedata value="0.01" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
                 <schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />
 				<collision activate="true">
 				    <distancedp value="0.5" comment="Allowed collision overlap according Dp (default=0.5)" />
 					<contactmethod value="0" comment="Contact method type. 0:NSC (Non Smooth Contacts), 1:SMC (SMooth Contacts). (default=0)" />	
 				</collision>
 				<bodyfloating id="boulder" mkbound="51" modelfile="AutoActual" />
-                <bodyfixed id="tank" mkbound="0" modelfile="AutoActual" />
+                <bodyfixed id="tank" mkbound="0" modelfile="AutoActual" modelnormal="invert" />
+                <bodyfixed id="cliff" mkbound="1" modelfile="AutoActual" />
             </chrono>
         </special>
         <parameters>
