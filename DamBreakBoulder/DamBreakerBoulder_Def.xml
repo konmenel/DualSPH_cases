@@ -15,7 +15,7 @@
         <mkconfig boundcount="240" fluidcount="9" />
         <geometry>
             <predefinition>
-                <newvar block_x="0.03" block_y="0.015" block_z="0.02" />
+                <newvar block_x="0.03" block_y="0.02" block_z="0.015" />
                 <newvar tank_width="0.3" />
             </predefinition>
             <definition dp="0.00375" units_comment="metres (m)"> 
