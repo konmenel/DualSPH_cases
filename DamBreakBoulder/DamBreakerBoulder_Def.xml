@@ -14,6 +14,10 @@
         </constantsdef>
         <mkconfig boundcount="240" fluidcount="9" />
         <geometry>
+            <predefinition>
+                <newvar block_x="0.03" block_y="0.015" block_z="0.02" />
+                <newvar tank_width="0.3" />
+            </predefinition>
             <definition dp="0.00375" units_comment="metres (m)"> 
                 <pointmin x="-7.05" y="-0.05" z="-0.05" />
                 <pointmax x="5.05" y="0.35" z="0.55" />
@@ -31,8 +35,8 @@
                     <setmkbound mk="51" />
                     <drawbox>
                         <boxfill>solid</boxfill>
-                        <point x="-0.08" y="0.135" z="0.1" /> !-- distance between particles of the cube and particles of the bottom should be "dp"
-                        <size x="-0.03" y="0.015" z="0.02" />
+                        <point x="-0.08" y="0.5*tank_width - 0.5*block_y" z="0.1" /> !-- distance between particles of the cube and particles of the bottom should be "dp"
+                        <size x="-block_x" y="block_y" z="block_z" />
                     </drawbox>
                     <shapeout file="boulder" />
                     <setmkbound mk="0" />
