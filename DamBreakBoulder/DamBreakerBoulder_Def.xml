@@ -90,7 +90,7 @@
         </special> -->
         <parameters>
             <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
-            <parameter key="StepAlgorithm" value="1" comment="Step Algorithm 1:Verlet, 2:Symplectic (def=1)" />
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (def=1)" />
             <parameter key="Boundary" value="2" comment="Boundary method 1:DBC, 2:mDBC (default=1)" />
             <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Eulerian equations (def=40)" />
             <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (def=1)" />
@@ -103,7 +103,7 @@
             <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
             <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
             <parameter key="RigidAlgorithm" value="2" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM, 3:Chrono (default=1)" />
-            <parameter key="FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (def=0)" />
+            <parameter key="FtPause" value="0.01" comment="Time to freeze the floatings at simulation start (warmup) (def=0)" />
             <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
             <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
             <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
