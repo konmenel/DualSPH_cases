@@ -18,7 +18,7 @@
                 <newvar block_x="0.03" block_y="0.02" block_z="0.015" /> !-- size of block
                 <newvar tank_width="0.1" />
             </predefinition>
-            <definition dp="0.00375" units_comment="metres (m)"> 
+            <definition dp="0.0025" units_comment="metres (m)"> 
                 <pointmin x="-7.05" y="-0.05" z="-0.05" />
                 <pointmax x="5.05" y="0.35" z="0.55" />
             </definition>
@@ -75,7 +75,7 @@
         </properties>
     </casedef>
     <execution>
-        <!-- <special>
+        <special>
             <chrono>
                 <_savedata value="0.01" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
                 <schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />
@@ -87,7 +87,7 @@
                 <bodyfixed id="tank" mkbound="0" modelfile="AutoActual" modelnormal="invert" />
                 <bodyfixed id="cliff" mkbound="1" modelfile="AutoActual" />
             </chrono>
-        </special> -->
+        </special>
         <parameters>
             <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
             <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (def=1)" />
