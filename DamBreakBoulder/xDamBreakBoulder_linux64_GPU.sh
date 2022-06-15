@@ -8,7 +8,7 @@ fail () {
 
 # "name" and "dirout" are named according to the testcase
 
-export name=DamBreakerBoulder
+export name=DamBreakerBoulder_fast2
 export dirout=${name}_out
 export diroutdata=${dirout}/data
 
