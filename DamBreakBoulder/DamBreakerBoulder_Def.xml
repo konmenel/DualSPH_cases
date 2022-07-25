@@ -143,7 +143,7 @@
             <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Eulerian equations (def=40)" />
             <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (def=1)" />
             <parameter key="ViscoTreatment" value="" comment="Viscosity Formulation 1:Artificial, 2:Laminar+SPS (def=1)" />
-            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="Visco" value="1E-6" comment="Viscosity value (Kinematic Viscosity for Laminar+SPS)" />
             <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
             <parameter key="DensityDT" value="3" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
             <parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
